@@ -9,14 +9,60 @@
     <title>Aryan Inguz | Portfolio</title>
     <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
     <link rel="stylesheet" href="assets/css/meyawo.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <style>
         html{
             scroll-behavior: smooth;
         }
+        
+.spinner {
+    position: relative;
+    margin-top: 320px;
+    left: 45vw;
+    width: 66px;
+    height: 66px;
+    display: grid;
+    border: 4.5px solid #0000;
+    border-radius: 50%;
+    border-color: #dbdcef #0000;
+    animation: spinner-e04l1k 1s infinite linear;
+}
+
+.spinner::before,
+.spinner::after {
+    content: "";
+    grid-area: 1/1;
+    margin: 2.2px;
+    border: inherit;
+    border-radius: 50%;
+}
+
+.spinner::before {
+    border-color: #474bff #0000;
+    animation: inherit;
+    animation-duration: 0.5s;
+    animation-direction: reverse;
+}
+
+.spinner::after {
+    margin: 8.9px;
+}
+
+@keyframes spinner-e04l1k {
+    100% {
+        transform: rotate(1turn);
+    }
+}
+
+.con {
+    display: none;
+}
     </style>
 </head>
 
-<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home">
+<body data-spy="scroll" data-target=".navbar" data-offset="40" id="home" onload="myFunction()">
+    <div class="spinner" id="loader"></div>
+    <main  id="main" class="con">
 
     <nav class="custom-navbar" data-spy="affix" data-offset-top="20">
         <div class="container">
@@ -50,11 +96,16 @@
     <header id="home" class="header">
         <div class="overlay"></div>
         <div class="header-content container">
-            <h1 class="header-title">
-                <span class="up">HI!</span>
-                <span class="down">I am Aryan Inguz</span>
+            <h1 class="header-title" >
+                <span class="up" data-aos="fade-in"
+                data-aos-duration="1000" data-aos-once="true">HI!</span>
+                <span class="down" data-aos="zoom-in"
+                data-aos-duration="1000" data-aos-once="true">I am Aryan Inguz</span>
             </h1>
-            <p class="header-subtitle">Software Developer</p>
+            <p class="header-subtitle" data-aos="fade-up"
+            data-aos-duration="1000" data-aos-once="true">
+            
+            <b>Software Developer</b></p>
 
            <a href="https://github.com/Aryainguz" style="text-decoration: none;"><button class="btn btn-primary">Visit My Works</button></a>  
         </div>
@@ -69,10 +120,12 @@
                     <img src="assets/imgs/man.png" class="about-img"
                         alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
                 </div>
-                <div class="about-caption">
+                <div class="about-caption"data-aos="fade-in"
+                data-aos-duration="1000" data-aos-once="true">
                     <p class="section-subtitle">Who Am I ?</p>
                     <h2 class="section-title mb-3">About Me</h2>
-                    <p>
+                    <p data-aos="flip-left"
+                    data-aos-duration="1000" data-aos-once="true">
                        Hey, I am Aryan
                         <br>I am programming my ideas into reality. I love Computers and Science and Iam huge admirer of literature. Currently CTO at 
                       <b><a href="https://www.thexitingway.com/"  style="text-decoration: none;">Thexitingway.com</a></b>Iam an experienced  Web developer with specializing in Backend and great in Frontened aswell. 
@@ -86,12 +139,14 @@
 
 
     <section class="section" id="experience">
-        <div class="container text-center">
+        <div class="container text-center" data-aos="fade-in"
+        data-aos-duration="1000" data-aos-once="true">
             <p class="section-subtitle">My Experience</p>
             <h6 class="section-title mb-6">Experience</h6>
 
             <!-- row -->
-            <div class="container" style="display: flex;justify-content:center;">
+            <div class="container" style="display: flex;justify-content:center;"data-aos="fade-in"
+            data-aos-duration="1000" data-aos-once="true">
                     <div class="testimonial-card">
                         <div class="testimonial-card-img-holder">
                             <img src="https://media.licdn.com/dms/image/C4D0BAQHvZjdRCCbQTQ/company-logo_200_200/0/1677833243977?e=2147483647&v=beta&t=62xYrWB3O3J-RoyUKFbnkjVixmQ9DifPNSL7k1x4i8Q" class="testimonial-card-img" alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
@@ -109,12 +164,14 @@
 
     <!-- service section -->
     <section class="section" id="service">
-        <div class="container text-center">
+        <div class="container text-center"data-aos="fade-in"
+        data-aos-duration="1000" data-aos-once="true">
             <p class="section-subtitle">What I Do ?</p>
             <h6 class="section-title mb-6">My Services</h6>
             <!-- row -->
             <div class="row">
-                <div class="col-md-6 col-lg-3">
+                <div class="col-md-6 col-lg-3"data-aos="fade-in"
+                data-aos-duration="1000" data-aos-once="true">
                     <div class="service-card">
                         <div class="body">
                             <img src="assets/imgs/pencil-case.svg"
@@ -125,7 +182,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-3">
+                <div class="col-md-6 col-lg-3"data-aos="fade-in"
+                data-aos-duration="1000" data-aos-once="true">
                     <div class="service-card">
                         <div class="body">
                             <img src="assets/imgs/responsive.svg"
@@ -136,7 +194,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-3">
+                <div class="col-md-6 col-lg-3"data-aos="fade-in"
+                data-aos-duration="1000" data-aos-once="true">
                     <div class="service-card">
                         <div class="body">
                             <img src="assets/imgs/toolbox.svg"
@@ -147,7 +206,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-3">
+                <div class="col-md-6 col-lg-3"data-aos="fade-in"
+                data-aos-duration="1000" data-aos-once="true">
                     <div class="service-card">
                         <div class="body">
                             <img src="assets/imgs/analytics.svg"
@@ -164,12 +224,14 @@
 
     <!-- portfolio section -->
     <section class="section" id="portfolio">
-        <div class="container text-center">
+        <div class="container text-center"data-aos="flip-right"
+        data-aos-duration="1000" data-aos-once="true">
             <p class="section-subtitle">What I Did ?</p>
             <h6 class="section-title mb-6">My Projects</h6>
             <!-- row -->
             <div class="row">
-                <div class="col-md-4">
+                <div class="col-md-4"data-aos="fade-in"
+                data-aos-duration="1000" data-aos-once="true">
                     <a href="https://txwservices.software/" class="portfolio-card">
                         <img src="assets\imgs\Screenshot 2023-07-21 121327.png" class="portfolio-card-img"
                             alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
@@ -181,7 +243,8 @@
                         </span>
                     </a>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4"data-aos="fade-in"
+                data-aos-duration="1000" data-aos-once="true">
                     <a href="https://email-newsletter-subscription-web-app-using-express-js.vercel.app/" class="portfolio-card">
                         <img class="portfolio-card-img" src="assets\imgs\Screenshot 2023-07-21 121354.png" class="img-responsive rounded"
                             alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
@@ -193,7 +256,8 @@
                         </span>
                     </a>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4"data-aos="fade-in"
+                data-aos-duration="1000" data-aos-once="true">
                     <a href="https://aryaninguz.me/IE-TXW-Web-Design-Custom-CSS.github.io/" class="portfolio-card">
                         <img class="portfolio-card-img" src="assets\imgs\Screenshot 2023-07-21 121531.png" class="img-responsive rounded"
                             alt="Download free bootstrap 4 landing page, free boootstrap 4 templates, Download free bootstrap 4.1 landing page, free boootstrap 4.1.1 templates, meyawo Landing page">
@@ -210,12 +274,14 @@
     </section> <!-- end of portfolio section -->
 
     <!-- pricing section -->
-    <section class="section" id="pricing">
+    <section class="section" id="pricing"data-aos="fade-in"
+    data-aos-duration="1000" data-aos-once="true">
         <div class="container text-center">
             <p class="section-subtitle">How Much I Charge ?</p>
             <h6 class="section-title mb-6">My Pricing</h6>
             <!-- row -->
-            <div class="pricing-wrapper">
+            <div class="pricing-wrapper" data-aos="flip-right"
+            data-aos-duration="1000" data-aos-once="true">
                 <div class="pricing-card">
                     <div class="pricing-card-header">
                         <img class="pricing-card-icon" src="assets/imgs/scooter.svg"
@@ -283,7 +349,8 @@
     <!-- section -->
     <section class="section-sm bg-primary">
         <!-- container -->
-        <div class="container text-center text-sm-left">
+        <div class="container text-center text-sm-left"data-aos="fade-in"
+        data-aos-duration="1000" data-aos-once="true">
             <!-- row -->
             <div class="row align-items-center">
                 <div class="col-sm offset-md-1 mb-4 mb-md-0">
@@ -301,7 +368,8 @@
 
     <!-- contact section -->
     <section class="section" id="contact">
-        <div class="container text-center">
+        <div class="container text-center"data-aos="fade-in"
+        data-aos-duration="1000" data-aos-once="true">
             <p class="section-subtitle">How can you communicate?</p>
             <h6 class="section-title mb-5">Contact Me</h6>
             <a href="https://wa.me/9816328430"><button class="btn btn-lg my-font btn-light rounded">Whatsapp</button></a>    
@@ -311,7 +379,8 @@
 
     <!-- footer -->
     <div class="container">
-        <footer class="footer">
+        <footer class="footer"data-aos="fade-in"
+        data-aos-duration="1000" data-aos-once="true">
             <p class="mb-0">Copyright
                 <script>document.write(new Date().getFullYear())</script> &copy; <a
                     href="http://www.devcrud.com">Aryan</a> Inguz
@@ -322,7 +391,7 @@
             </div>
         </footer>
     </div> <!-- end of page footer -->
-
+</main>
     <!-- core  -->
     <script src="assets/vendors/jquery/jquery-3.4.1.js"></script>
     <script src="assets/vendors/bootstrap/bootstrap.bundle.js"></script>
@@ -332,6 +401,23 @@
 
     <!-- Meyawo js -->
     <script src="assets/js/meyawo.js"></script>
+    <script>
+                var myVar;
+
+function myFunction() {
+    myVar = setTimeout(showPage, 2000);
+}
+
+function showPage() {
+    let x = document.body
+    document.body.style.backgroundColor = 'white'
+    document.getElementById("loader").style.display = "none";
+    document.getElementById("main").style.display = "block";
+    AOS.init();
+
+}
+    </script>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 
 </body>
 
